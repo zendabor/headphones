@@ -1,0 +1,20 @@
+$tablet: 768px;
+$phone: 480px;
+$basefontsize:18px;
+$containerwidth:940px;
+
+@function rem($px) {
+    @return $px / $basefontsize+0rem;
+}
+
+@mixin tablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width: $phone) {
+        @content;
+    }
+}

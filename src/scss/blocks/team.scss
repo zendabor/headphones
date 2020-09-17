@@ -1,0 +1,130 @@
+.team__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.team__wrapper {
+    min-height: 29.5rem;
+}
+.team__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.team__title {
+    margin-bottom: rem(57px);
+    font-size: rem(48px);
+    font-weight: bold;
+    text-align: center;
+}
+
+.team__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    margin-right: rem(20px);
+    &:last-child{
+        margin-right: 0;
+    }
+    &.team__item--imageOnly {
+        .team__img {
+        display: flex;
+        }
+        }
+        &.team__item--onClick {
+            .team__img {
+                display: flex;
+            }
+            .team__info {
+                display: flex;
+            }
+            .team__name{
+                &::after{
+                    content: "";
+                    position: absolute;
+                    border: 6px solid transparent;
+                    border-bottom: 0.5rem solid #e01f3d;
+                    transform: rotateY(179deg);
+                    right: -12%;
+                    top: 0;
+            } 
+        }
+    }
+    @include tablet {
+        margin-bottom: 1.2rem;
+        margin-right: 0;
+    }
+}
+.team__avatar {
+    width: rem(220px);
+    min-height: rem(288px);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(13px);
+    align-items: center;
+    @include tablet {
+        flex-direction: column-reverse;
+        min-height: auto;
+    }
+}
+.team__img {
+    width: 12rem;
+    margin-bottom: rem(27px);
+    @include tablet {
+        margin-bottom: rem(18px);
+        display: none;
+    }
+}
+.team__info {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    @include tablet {
+        width: 60%;
+    }
+}
+.team__name {
+    cursor: pointer;
+    position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            border: 6px solid transparent;
+            border-top: 0.5rem solid #e01f3d;
+            transform: rotateY(178deg);
+            right: -12%;
+            top: rem(7px);
+        }
+    @include tablet {
+        font-size: 17px;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+.team__profession {
+    font-size: inherit;
+    font-weight: normal;
+    margin-bottom: rem(13px);
+    @include tablet {
+        font-weight: bold;
+    }
+}
+
+.team__text {
+    width: 15rem;
+    color: #666666;
+    font-size: rem(16px);
+}

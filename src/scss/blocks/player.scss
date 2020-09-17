@@ -1,0 +1,137 @@
+
+.player {
+    position: relative;
+    &__section {
+        background-color: #f5f5f5;
+        position: relative;
+    }
+    &__pentogram {
+        position: absolute;
+        bottom: -1rem;
+        right: 20%;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title {
+        font-size: 48px;
+        margin-bottom: rem(50px);
+        @include phone {
+            font-size: 36px;
+            text-align: center
+        }
+    }
+}
+
+.video__player-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 52px;
+    height: 74px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.video__player-img--active {
+    display: none;
+}
+.play__svg {
+    fill: white;
+    width: 52px;
+    height: 74px;
+}
+#player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.video__toolbar {
+    width: 100%;
+    height: rem(35px);
+    background-color: #3e3e3e;
+    margin-top: -0.2rem;
+    display: flex;
+}
+.sound {
+    display: flex;
+    align-items: center;
+    margin: 0 rem(15px);
+}
+.sound__volume {
+    display: flex;
+}
+.duration__length {
+    width: 100%;
+    height: 4px;
+    outline: none;
+    border-radius: 1px;
+    background-color: #e01f3d;
+    appearance: none;
+}
+.duration__length::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #e01f3d;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+.duration__length--other {
+    width: rem(58px);
+    height: 4px;
+}
+.duration__circle {
+    cursor: pointer;
+    margin-top: -4px;
+    display: block;
+}
+.duration__circle--high {
+    right: 0;
+    position: absolute;
+}
+
+.sound__mic {
+    width: rem(20px);
+    cursor: pointer;
+    height: rem(20px);
+    margin-right: rem(10px);
+}
+.player__volume {
+    width: rem(18px);
+    height: rem(22px);
+    fill: white;
+}
+.duration {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding-left: 1.25rem;
+}
+.video__player {
+    position: relative;
+}
+.duration__img {
+    margin-right: .25rem;
+    height: 0;
+    width: 0;
+    border: 11px solid transparent;
+    border-left-color: white;
+    border-right-width: 0;
+    background: transparent;
+    transition: all 0.1s ease-out;
+}
+.duration__img--active {
+    border: 7px solid #626262;
+    height: rem(20px);
+    border-top: 0;
+    border-bottom: 0;
+    page-break-after: 1px;
+    padding: 2px;
+}

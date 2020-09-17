@@ -1,0 +1,93 @@
+.accordion {
+    &__section {
+        background: url("/img/bg/hp-hero-powerbeats.jpg.large.1x.png") no-repeat center center/cover;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    &__title {
+        font-size: 48px;
+        color: #fff; 
+        position: absolute;
+        top: rem(100px);
+        left: rem(80px);
+    }
+   
+    &__list {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        @include phone {
+            width: 100%;
+           justify-content: flex-end;
+        }
+    }
+    &__close {
+        background-color: inherit;
+        border: 0;
+        outline: none;
+        opacity: 0.7;
+        padding-top: 15px;
+        cursor: pointer;
+    }
+    &__svg {
+        width: 18px;
+        height: 18px;
+        fill: #fff;
+    }
+    &__item {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        height: 100%;
+        &-trigger {
+            width: rem(100px);
+            white-space: nowrap;
+            font-size: 34px; 
+            font-weight: bold; 
+            color: #fff;
+            transform: rotate(-90deg) translateX(-290%);
+            display: flex;
+            justify-content: flex-start;
+        }
+        &-text {
+            overflow: hidden;
+            width: 0;
+            transition: width .3s;
+            opacity: 0.93;
+            background: rgba(51, 53, 55, 0.93);
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            z-index: 2;
+            & p {
+                font-size: 16px;
+                line-height: 1.5;
+                color: #fff;
+                height: 100%;
+                padding: rem(39px) rem(25px);
+            }
+        }
+        &-text--active {
+            transition: width .3s;
+            @include phone {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        } 
+     }
+}
+#item--silver {
+    background-color: #999;
+}
+#item--black {
+    background-color: #151515;
+}
+#item--red {
+    background-color: #e01f3d;
+}

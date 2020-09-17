@@ -1,0 +1,51 @@
+.why {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 19.5rem;
+        bottom: -1rem;
+        border: rem(21px) solid transparent;
+        border-top: rem(33px) solid #e01f3d;
+        transform: rotate(161deg);
+        z-index: 1;
+        @include tablet {
+            left: 10%;
+        }
+    }
+}
+
+.why__title {
+    font-size: rem(48px);
+    font-weight: bold;
+    margin-bottom: rem(25px);
+    text-align: center;
+    text-transform: uppercase;
+    @include phone {
+        font-size: 2rem;
+    }
+}
+
+.why__headline {
+    margin-bottom: rem(57px);
+}
+
+.why__subtitle {
+    font-size: rem(18px);
+    color: #666666;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    @include tablet {
+        width: 76%;
+    }
+
+    @include phone {
+        padding: 0 2%;
+    }
+}

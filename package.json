@@ -1,0 +1,37 @@
+{
+  "name": "beats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zendabor/headphones.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zendabor/headphones/issues"
+  },
+  "homepage": "https://github.com/zendabor/headphones#readme",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "jquery-touchswipe": "^1.6.19",
+    "mobile-detect": "^1.4.4",
+    "parcel-plugin-handlebars": "^0.4.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "browser-sync": "^2.26.3",
+    "css-loader": "^2.1.1",
+    "gulp": "^4.0.2",
+    "gulp-exec": "^3.0.2",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.17.3"
+  }
+}

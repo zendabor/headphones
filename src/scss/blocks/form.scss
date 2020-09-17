@@ -1,0 +1,203 @@
+.form__section {
+    background: url("../img/bg/Векторный смарт-объект.png") center top no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    @include phone {
+        height: 100%;
+    }
+}
+
+.form {
+    display: flex;
+    margin: rem(50px) rem(80px) rem(40px);
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include phone {
+        margin: 0;
+    }
+}
+
+.form__main-title {
+    font-size: rem(48px);
+    font-weight: bold;
+    text-align: center;
+    margin-top: rem(85px);
+}
+
+.form__title {
+    margin-bottom: rem(6px);
+    font-size: rem(18px);
+}
+
+.form__col {
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include phone {
+        margin-right: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(18px);
+
+    @include phone {
+        margin-bottom: 2rem;
+    }
+}
+
+.form__row--right {
+    flex-direction: column;
+
+    @include phone {
+        align-items: center;
+    }
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--textarea {
+        @include phone {
+            width: 100%;
+            margin-right: 0;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    padding: rem(20px) rem(12px);
+    border: solid rem(1px) transparent;
+
+    &:focus {
+        border-color: red;
+        outline: none;
+    }
+
+    &--textarea {
+        height: rem(180px);
+        resize: none;
+
+        @include tablet {
+            height: rem(80px);
+        }
+
+        @include phone {
+            width: 95%;
+        }
+    }
+
+    @include tablet {
+        padding: rem(8px) rem(12px);
+    }
+}
+
+.form__control {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+}
+
+.form__radio {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    margin-right: rem(10px);
+    margin-top: rem(16px);
+
+    &:last-child {
+        margin-right: 0;
+
+    }
+}
+
+.form__radio-item {
+    display: none;
+
+    &:checked~.form__radio-visible {
+        &::before {
+            content: "";
+            display: block;
+        }
+    }
+}
+
+.form__radio-visible {
+    width: rem(26px);
+    height: rem(26px);
+    position: relative;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: rem(8px);
+
+    &::before {
+        content: "";
+        display: none;
+        width: rem(14px);
+        height: rem(14px);
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: red;
+    }
+}
+
+.form__radio-visible--square {
+    border-radius: 0;
+
+    &::before {
+        content: "";
+        border-radius: 0;
+    }
+}
+
+.form__btn {
+    display: flex;
+    align-items: center;
+    margin-top: rem(40px);
+
+    @include tablet {
+        justify-content: center;
+    }
+}
+
+.special--btn {
+    background-color: black;
+    margin-left: rem(10px);
+
+    &:hover {
+        color: red;
+        transition: .3s linear;
+        background-color: black;
+    }
+}
+.input-error {
+    border-color: red;
+}

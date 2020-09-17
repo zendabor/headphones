@@ -1,0 +1,168 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+        justify-content: space-between;
+    }
+}
+
+.header__logo {
+    margin-right: rem(39px);
+    margin-left: 0.5rem;
+}
+
+.header__img {
+    width: rem(40px);
+    height: rem(40px);
+}
+
+
+.header__list.menu_opened {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #2f3234;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000000;
+    padding-top: 90px;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include tablet {
+        display: none;
+        flex-direction: column;
+    }
+}
+.header__img-close {
+    width: rem(36px);
+    height: rem(30px);
+}
+.header__close {
+    display: none;
+
+    @include tablet {
+        display: block;
+        position: absolute;
+        top: 3%;
+        right: 3%;
+    }
+}
+
+.header__item {
+    margin-left: rem(25px);
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    @include tablet {
+        margin-left: 0;
+        color: white;
+        font-size: 36px;
+        margin-bottom: rem(20px);
+    }
+    
+}
+
+.header__link {
+    font-size: rem(16px);
+    color: black;
+    line-height: rem(30px);
+    text-decoration: none;
+
+    @include tablet {
+        color: white;
+        font-size: 36px;
+    }
+}
+
+.header__contact {
+    margin-left: auto;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.contact {
+    color: inherit;
+    font-size: rem(21px);
+}
+
+.contact:before {
+    content: url("../img/icon/phone.png");
+    margin-right: rem(4px);
+}
+
+.header__gamburger,
+.header__gamburger-close {
+    display: none;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    @include tablet {
+        display: block;
+    }
+}
+.header__gamburger-close {
+    top: 2%;
+    right: 4%;
+}
+.header__img-close {
+    fill: white;
+}
+
+
+.header__gamburger-btn {
+    width: 36px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f5f5f5;
+}
+
+.header__gamburger-line {
+    position: relative;
+    width: 24px;
+    height: 4px;
+    background-color: black;
+    top: 0;
+    left: 0;
+
+    &::before {
+        content: "";
+        width: 24px;
+        height: 4px;
+        background-color: black;
+        position: absolute;
+        top: 8px;
+        left: 0;
+    }
+
+    &::after {
+        content: "";
+        width: 24px;
+        height: 4px;
+        background-color: black;
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+    }
+
+}

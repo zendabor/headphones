@@ -1,0 +1,233 @@
+.slider {
+    position: relative;
+    background-color: #f5f5f5;
+    &::after {
+        position: absolute;
+        content: "";
+        width: rem(30px);
+        height: rem(30px);
+        background-color: #000000;
+        transform: rotate(120deg);
+        bottom: -1rem;
+        right: 19.5rem;
+        border-radius: 3px;
+        z-index: 1;
+        @include tablet {
+            right: 10%;
+        }
+    }
+}
+.slider__wrapper {
+    overflow: hidden;
+    position: relative;
+    
+}
+.slider__content {
+    display: flex;
+    flex-shrink: 0;
+    position: relative;
+    right: 0%;
+    transition: right .3s;
+    will-change: right;
+}
+
+.slider__block {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    @include tablet {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.slider__column-left {
+    display: flex;
+    justify-content: flex-start;
+    width: 48%;
+    margin-right: 6%;
+    align-items: center;
+    @include tablet {
+        margin-right: 0;
+        margin-bottom: rem(60px);
+        padding: 0 4.5rem 0 4.5rem;
+        width: calc(48% + 9rem);
+    }
+    @include phone {
+        padding: 0;
+        width: 65%;
+    }
+}
+
+
+.slider__column-right {
+    width: 52%;
+    @include tablet {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.slider__function {
+    width: rem(90px);
+    top: 0;
+    left: 0;
+    transition: opacity .3s;
+    position: relative;
+    &:hover {
+        .slider__list {
+            opacity: 1;
+            left: 100%;
+        }
+    }
+    @include tablet {
+        display: none;
+    }
+}
+.slider__gear {
+    cursor: pointer;
+    height: rem(90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9a9a9a;
+    border-radius: rem(5px);
+    margin-bottom: rem(37px);
+}
+.slider__list {
+    border-radius: 5px;
+    border: solid rem(1px) #efefef;
+    background-color: #ffffff;
+    padding: rem(20px) rem(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    top: -2%;
+    left: -9999px;
+    transition: opacity .3s;
+}
+
+.slider__svg {
+    fill: white;
+    width: rem(35px);
+    height: rem(35px);
+}
+
+.slider__characters {
+    display: flex;
+    margin-bottom: 2.3rem;
+}
+
+.slider__character {
+    margin-right: 5.3rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.slider__character-type {
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: rem(8px);
+}
+.slider__title {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 1.3rem;
+    text-transform: uppercase;
+    @include tablet {
+        text-align: center;
+    }
+    @include phone {
+        font-size: 24px;
+    }
+}
+.slider__text {
+    margin-bottom: 2.2rem;
+    @include tablet {
+        text-align: center;
+    }
+}
+.slider__character-value {
+    font-weight: bold;
+    color: black;
+
+}
+.slider__footer {
+    display: flex;
+    align-items: center;
+}
+.slider__price {
+    font-size: rem(36px);
+    margin-right: 1.2rem;
+}
+
+.slider__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    &--prev {
+        cursor: pointer;
+        left: 0;
+        transform: translateY(-50%) rotateY(180deg);
+    }
+    &--next {
+        cursor: pointer;
+        right: 0;
+    }
+    @include tablet {
+        top: 20vmin;
+        &--prev {
+            left: 15%;
+        }
+        &--next {
+            right: 15%;
+        }
+    }
+    @include phone {
+        top: 32vmin;
+        &--prev {
+            left: 3%;
+        }
+        &--next {
+            right: 3%;
+        }
+    }
+}
+
+.slider__arrow {
+    width: 13px;
+    height: 28px;
+}
+
+.slider__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: rem(230px);
+    margin-bottom: rem(15px);
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.slider__item-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.slider__item-svg {
+    width: rem(32px);
+    height: rem(32px);
+}
+
+
+

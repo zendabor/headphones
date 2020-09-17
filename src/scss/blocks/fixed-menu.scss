@@ -1,0 +1,34 @@
+.fixed-menu {
+    &__item {
+        cursor: pointer;
+        border-radius: 50%;
+        margin-bottom: rem(5px);
+        width: rem(16px);
+        height: rem(16px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--active {
+            border: solid 1px red;
+            .fixed-menu__link {
+                background-color: red;
+            }
+        }
+    }
+    position: fixed;
+    top: 18%;
+    right: 4%;
+    @include tablet {
+        display: none;
+    }
+}
+
+.fixed-menu__link {
+    width: rem(6px);
+    height: rem(6px);
+    border-radius: 50%;
+    display: block;
+    border: 0;
+    background: unset;
+    background-color: #b2b2b2;
+ }
